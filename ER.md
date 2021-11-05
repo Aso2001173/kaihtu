@@ -103,6 +103,7 @@ entity "販売メーカー" as maker <maker> <<T,TRANSACTION_MARK_COLOR>> MAIN_E
       r_id[PK]
       r_coment
       r_sutars
+      c_id
  } 
 customer ||--||cart
 cart ----o{ prodact
