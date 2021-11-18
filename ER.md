@@ -55,15 +55,7 @@ package "ECサイト" as target_system {
      p_pr
      p_photo_path
     }
-entity "販売メーカー" as maker <maker> <<T,TRANSACTION_MARK_COLOR>> MAIN_ENTITY{
-    +m_id[PK]
-    --
-   m_name
-   m_postcode
-   m_address
-   m_tel
-   m_faxtel
-   }
+
     entity "ジャンル" as genre <genre> <<M,MASTER_MARK_COLOR>> {
         +g_id [PK]
         --
@@ -109,7 +101,6 @@ entity "注文" as order <order> <<M,MASTER_MARK_COLOR>> {
 }
 customer ||--||cart
 cart ----o{ prodact
-maker ----o{ prodact
 prodact }o--|{ genre
 customer ||--|| password
 customer ||--|{ order_details
